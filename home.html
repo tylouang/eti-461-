@@ -1,0 +1,850 @@
+<html lang="en-US"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes">
+    
+    <title>Nike</title>
+    <meta name="robots" content="max-image-preview:large">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/cart-frontend.js?ver=fe4c99da1e072bc084e2" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.21" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/vendor/react.min.js?ver=18.2.0" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/blocks-checkout.js?ver=844131329a561df615f0" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.2.0" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/blocks-components.js?ver=9277d2a3f5c4e876ed20" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-data.js?ver=d4033068c24dafb13ccd" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-registry.js?ver=1c879273bd5c193cad0a" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/data.min.js?ver=e6595ba1a7cd34429f66" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/compose.min.js?ver=1339d3318cd44440dccb" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/deprecated.min.js?ver=e1f84915c5e8ae38964c" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/dom.min.js?ver=4ecffbffba91b10c5c7a" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/element.min.js?ver=cb762d190aebbec25b27" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/escape-html.min.js?ver=6561a406d2d232a6fbd2" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/is-shallow-equal.min.js?ver=e0f9f1d78d83f5196979" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/keycodes.min.js?ver=034ff647a54b018581d3" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/priority-queue.min.js?ver=9c21c957c7e50ffdbf48" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/private-apis.min.js?ver=5e7fdf55d04b8c2aadef" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/redux-routine.min.js?ver=b14553dce2bee5c0f064" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/wc-settings.js?ver=07c2f0675ddd247d2325" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/api-fetch.min.js?ver=4c185334c5ec26e149cc" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/url.min.js?ver=421139b01f33e5b327d8" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/data-controls.min.js?ver=49f5587e8b90f9e7cc7e" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/html-entities.min.js?ver=2cd3358363e0675638fb" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/notices.min.js?ver=673a68a7ac2f556ed50b" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-middleware.js?ver=ca04183222edaf8a26be" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/a11y.min.js?ver=d90eebea464f6c09bfd5" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/primitives.min.js?ver=a41bfd5835f583ae838a" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/warning.min.js?ver=ed7c8b0940914f4fe44b" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-shared-context.js?ver=6eb6865831aa5a75475d" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-shared-hocs.js?ver=5e01ba7861e4c09bce65" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/price-format.js?ver=eb7a7398126f71912b09" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/autop.min.js?ver=9fb50649848277dd318d" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/blocks.min.js?ver=6612d078dfaf28b875b8" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/blob.min.js?ver=9113eed771d446f4a556" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/block-serialization-default-parser.min.js?ver=14d44daebf663d05d330" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/rich-text.min.js?ver=dd125966cf6cc0394ae0" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/shortcode.min.js?ver=b7747eee0efafd2f0c3b" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/plugins.min.js?ver=2d369cbfdcb887111e06" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/style-engine.min.js?ver=03f13c515060de24b556" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-includes/js/dist/wordcount.min.js?ver=55d8c2bf3dc99e7ea5ec" as="script" rel="prefetch">
+    <link href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/checkout-frontend.js?ver=956a3bb1e165381d83f3" as="script" rel="prefetch">
+    <link rel="alternate" type="application/rss+xml" title="Nike » Feed" href="http://localhost/wordpress/feed/">
+    <link rel="alternate" type="application/rss+xml" title="Nike » Comments Feed" href="http://localhost/wordpress/comments/feed/">
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.2"}};
+    /*! This file is auto-generated */
+    !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+    /* ]]> */
+    </script>
+    <link rel="stylesheet" id="dashicons-css" href="http://localhost/wordpress/wp-includes/css/dashicons.min.css?ver=6.5.2" type="text/css" media="all">
+    <link rel="stylesheet" id="admin-bar-css" href="http://localhost/wordpress/wp-includes/css/admin-bar.min.css?ver=6.5.2" type="text/css" media="all">
+    <style id="admin-bar-inline-css" type="text/css">
+    
+            @media screen { html { margin-top: 32px !important; } }
+            @media screen and ( max-width: 782px ) { html { margin-top: 46px !important; } }
+        
+    @media print { #wpadminbar { display:none; } }
+    </style>
+    <link rel="stylesheet" id="sweetalert2-css" href="http://localhost/wordpress/wp-content/plugins/user-registration/assets/css/sweetalert2/sweetalert2.min.css?ver=10.16.7" type="text/css" media="all">
+    <link rel="stylesheet" id="user-registration-general-css" href="http://localhost/wordpress/wp-content/plugins/user-registration/assets/css/user-registration.css?ver=3.2.0" type="text/css" media="all">
+    <link rel="stylesheet" id="user-registration-smallscreen-css" href="http://localhost/wordpress/wp-content/plugins/user-registration/assets/css/user-registration-smallscreen.css?ver=3.2.0" type="text/css" media="only screen and (max-width: 768px)">
+    <link rel="stylesheet" id="user-registration-my-account-layout-css" href="http://localhost/wordpress/wp-content/plugins/user-registration/assets/css/my-account-layout.css?ver=3.2.0" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-icons-css" href="http://localhost/wordpress/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.29.0" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-common-css" href="http://localhost/wordpress/wp-content/plugins/elementor/assets/css/common.min.css?ver=3.21.1" type="text/css" media="all">
+    <link rel="stylesheet" id="e-theme-ui-light-css" href="http://localhost/wordpress/wp-content/plugins/elementor/assets/css/theme-light.min.css?ver=3.21.1" type="text/css" media="all">
+    <style id="wp-emoji-styles-inline-css" type="text/css">
+    
+        img.wp-smiley, img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <style id="classic-theme-styles-inline-css" type="text/css">
+    /*! This file is auto-generated */
+    .wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+    body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+    .wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+    :where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+    :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+    .wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+    </style>
+    <link rel="stylesheet" id="woocommerce-layout-css" href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=8.8.2" type="text/css" media="all">
+    <link rel="stylesheet" id="woocommerce-smallscreen-css" href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=8.8.2" type="text/css" media="only screen and (max-width: 768px)">
+    <link rel="stylesheet" id="woocommerce-general-css" href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=8.8.2" type="text/css" media="all">
+    <style id="woocommerce-inline-inline-css" type="text/css">
+    .woocommerce form .form-row .required { visibility: visible; }
+    </style>
+    <link rel="stylesheet" id="Mulish-css" href="http://localhost/wordpress/wp-content/fonts/d01cc11eae2465ad87f824eb4247e064.css?ver=1.0" type="text/css" media="all">
+    <link rel="stylesheet" id="Padauk-css" href="http://localhost/wordpress/wp-content/fonts/7a67a0527e3df8d1c058c8292537ad6c.css?ver=1.0" type="text/css" media="all">
+    <link rel="stylesheet" id="bootstrap-css-css" href="http://localhost/wordpress/wp-content/themes/shoes-store-elementor/assets/css/bootstrap.css?ver=4.5.0" type="text/css" media="all">
+    <link rel="stylesheet" id="fontawesome-css-css" href="http://localhost/wordpress/wp-content/themes/shoes-store-elementor/assets/css/fontawesome-all.css?ver=4.5.0" type="text/css" media="all">
+    <link rel="stylesheet" id="shoes-store-elementor-style-css" href="http://localhost/wordpress/wp-content/themes/shoes-store-elementor/style.css?ver=6.5.2" type="text/css" media="all">
+    <style id="shoes-store-elementor-style-inline-css" type="text/css">
+    
+                    .header-image-box{
+                        background-image: url(http://localhost/wordpress/wp-content/themes/shoes-store-elementor/assets/images/default-header-image.png) !important;
+                        -webkit-background-size: cover !important;
+                        -moz-background-size: cover !important;
+                        -o-background-size: cover !important;
+                        background-size: cover !important;
+                        height: 550px;
+                        display: flex;
+                        align-items: center;
+                    }
+    
+            .custom-logo{
+                height: px !important;
+                width: px !important;
+            }
+        
+    </style>
+    <link rel="stylesheet" id="shoes-store-elementor-responsive-css-css" href="http://localhost/wordpress/wp-content/themes/shoes-store-elementor/assets/css/responsive.css?ver=2.3.4" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="http://localhost/wordpress/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.21.1" type="text/css" media="all">
+    <link rel="stylesheet" id="swiper-css" href="http://localhost/wordpress/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-post-11-css" href="http://localhost/wordpress/wp-content/uploads/elementor/css/post-11.css?ver=1713579410" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-global-css" href="http://localhost/wordpress/wp-content/uploads/elementor/css/global.css?ver=1713579410" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-post-21-css" href="http://localhost/wordpress/wp-content/uploads/elementor/css/post-21.css?ver=1713579731" type="text/css" media="all">
+    <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPadauk%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMulish%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.5.2" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.8.8.2" id="jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript" id="wc-add-to-cart-js-extra">
+    /* <![CDATA[ */
+    var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wordpress\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/localhost\/wordpress\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=8.8.2" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.8.8.2" id="js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript" id="woocommerce-js-extra">
+    /* <![CDATA[ */
+    var woocommerce_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wordpress\/?wc-ajax=%%endpoint%%"};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=8.8.2" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+    <link rel="https://api.w.org/" href="http://localhost/wordpress/wp-json/"><link rel="alternate" type="application/json" href="http://localhost/wordpress/wp-json/wp/v2/pages/21"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd">
+    <meta name="generator" content="WordPress 6.5.2">
+    <meta name="generator" content="WooCommerce 8.8.2">
+    <link rel="canonical" href="http://localhost/wordpress/">
+    <link rel="shortlink" href="http://localhost/wordpress/">
+    <link rel="alternate" type="application/json+oembed" href="http://localhost/wordpress/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Fwordpress%2F">
+    <link rel="alternate" type="text/xml+oembed" href="http://localhost/wordpress/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Fwordpress%2F&amp;format=xml">
+                <style>
+            .woocommerce ul.products li.product .onsale {
+                left: auto; right: 10px;
+            }
+            </style>
+        
+            <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+        <meta name="generator" content="Elementor 3.21.1; features: e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, e_lazyload; settings: css_print_method-external, google_font-enabled, font_display-swap">
+                <style>
+                    .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+                    .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+                        background-image: none !important;
+                    }
+                    @media screen and (max-height: 1024px) {
+                        .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+                        .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+                            background-image: none !important;
+                        }
+                    }
+                    @media screen and (max-height: 640px) {
+                        .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+                        .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+                            background-image: none !important;
+                        }
+                    }
+                </style>
+                <script>
+            var woocs_is_mobile = 0;
+            var woocs_special_ajax_mode = 0;
+            var woocs_drop_down_view = "ddslick";
+            var woocs_current_currency = {"name":"USD","rate":1,"symbol":"&#36;","position":"right","is_etalon":1,"description":"USA dollar","hide_cents":0,"hide_on_front":0,"flag":""};
+            var woocs_default_currency = {"name":"USD","rate":1,"symbol":"&#36;","position":"right","is_etalon":1,"description":"USA dollar","hide_cents":0,"hide_on_front":0,"flag":""};
+            var woocs_redraw_cart = 1;
+            var woocs_array_of_get = '{}';
+            
+            woocs_array_no_cents = '["JPY","TWD"]';
+    
+            var woocs_ajaxurl = "http://localhost/wordpress/wp-admin/admin-ajax.php";
+            var woocs_lang_loading = "loading";
+            var woocs_shop_is_cached =0;
+            </script><style id="kirki-inline-styles">.logo a{ text-transform:none;}h1{font-family:Mulish!important;font-weight:700;}h2{font-family:Mulish!important;font-weight:700;}h3{font-family:Mulish!important;font-weight:700;}h4{font-family:Mulish!important;font-weight:700;}h5{font-family:Mulish!important;font-weight:700;}h6{font-family:Mulish!important;font-weight:700;}body{font-family:Padauk!important;}#main-menu a,#main-menu li a,#main-menu ul li a{ text-transform:uppercase;color:#000000;}#main-menu a:focus,#main-menu a:hover,#main-menu li.focus > a,#main-menu li:hover > a,#main-menu ul li a:hover,#main-menu ul li.current-menu-ancestor > a,#main-menu ul li.current-menu-item > a,#main-menu ul li.current-menu-parent > a,#main-menu ul li.current_page_ancestor > a,#main-menu ul li.current_page_item > a{color:#fc1313;}#main-menu ul.children li a,#main-menu ul.sub-menu li a{color:#000000;}#main-menu ul.children li a:hover,#main-menu ul.sub-menu li a:hover{color:#fff;background:#fc1313;}.header-image-box{background-attachment:scroll;}.header-image-box:before{background:#000000b3;}a.checkout-button.button.alt.wc-forward,.woocommerce #respond input#submit,.woocommerce #respond input#submit.alt,.woocommerce a.button,.woocommerce button.button,.woocommerce button.button.alt,.woocommerce input.button,.woocommerce input.button.alt,.woocommerce ul.products li.product .button{-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;}.footer-widget{background:rgba(0,0,0,1);background-color:rgba(0,0,0,1);background-repeat:no-repeat;background-position:center center;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-ms-background-size:cover;-o-background-size:cover;background-size:cover;}.footer-area{text-align:left;}.footer-copyright{background:#000000;}.footer-copyright a,.footer-copyright p{color:#ffffff;}@media (max-width: 767px){.header-image-box{height:200px;}}@media (min-width: 768px) and (max-width: 1023px){.header-image-box{height:350px;}}@media (min-width: 1024px){.header-image-box{height:550px;}}/* cyrillic-ext */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aqvG4w-.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+    /* cyrillic */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aOvG4w-.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* vietnamese */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aivG4w-.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8amvG4w-.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aevGw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }/* myanmar */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxckXh7Lk.woff2) format('woff2');
+      unicode-range: U+1000-109F, U+200C-200D, U+25CC, U+A92E, U+A9E0-A9FE, U+AA60-AA7F;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxYkXh7Lk.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxbEXh.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }/* cyrillic-ext */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aqvG4w-.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+    /* cyrillic */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aOvG4w-.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* vietnamese */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aivG4w-.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8amvG4w-.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aevGw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }/* myanmar */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxckXh7Lk.woff2) format('woff2');
+      unicode-range: U+1000-109F, U+200C-200D, U+25CC, U+A92E, U+A9E0-A9FE, U+AA60-AA7F;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxYkXh7Lk.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxbEXh.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }/* cyrillic-ext */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aqvG4w-.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+    /* cyrillic */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aOvG4w-.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* vietnamese */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aivG4w-.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8amvG4w-.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/mulish/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRW8aevGw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }/* myanmar */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxckXh7Lk.woff2) format('woff2');
+      unicode-range: U+1000-109F, U+200C-200D, U+25CC, U+A92E, U+A9E0-A9FE, U+AA60-AA7F;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxYkXh7Lk.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Padauk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(http://localhost/wordpress/wp-content/fonts/padauk/RrQRboJg-id7OnbxbEXh.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }</style>
+    <style id="css-ddslick" type="text/css">.dd-select{ border-radius:2px; border:solid 1px #ccc; position:relative; cursor:pointer;}.dd-desc { color:#aaa; display:block; overflow: hidden; font-weight:normal; line-height: 1.4em; }.dd-selected{ overflow:hidden; display:block; padding:10px; font-weight:bold;}.dd-pointer{ width:0; height:0; position:absolute; right:10px; top:50%; margin-top:-3px;}.dd-pointer-down{ border:solid 5px transparent; border-top:solid 5px #000; }.dd-pointer-up{border:solid 5px transparent !important; border-bottom:solid 5px #000 !important; margin-top:-8px;}.dd-options{ border:solid 1px #ccc; border-top:none; list-style:none; box-shadow:0px 1px 5px #ddd; display:none; position:absolute; z-index:2000; margin:0; padding:0;background:#fff; overflow:auto;}.dd-option{ padding:10px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }.dd-options > li:last-child > .dd-option{ border-bottom:none;}.dd-option:hover{ background:#f3f3f3; color:#000;}.dd-selected-description-truncated { text-overflow: ellipsis; white-space:nowrap; }.dd-option-selected { background:#f6f6f6; }.dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:5px; max-width:64px;}.dd-image-right { float:right; margin-right:15px; margin-left:5px;}.dd-container{ position:relative;}&ZeroWidthSpace; .dd-selected-text { font-weight:bold}&ZeroWidthSpace;</style><script src="http://localhost/wordpress/wp-includes/js/wp-emoji-release.min.js?ver=6.5.2" defer=""></script></head>
+    
+    <body class="home page-template page-template-templates page-template-frontpage page-template-templatesfrontpage-php page page-id-21 logged-in admin-bar wp-embed-responsive theme-shoes-store-elementor user-registration-page woocommerce-js elementor-default elementor-kit-11 elementor-page elementor-page-21 currency-usd customize-support dialog-body dialog-buttons-body dialog-container dialog-buttons-container e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit" data-elementor-device-mode="tablet">
+    
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    
+            (function() {
+                var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+    
+                    request = true;
+        
+                b[c] = b[c].replace( rcs, ' ' );
+                // The customizer requires postMessage and CORS (if the site is cross domain).
+                b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+            }());
+        
+    /* ]]> */
+    </script>
+            <div id="wpadminbar" class="nojq">
+                            <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+                    <ul role="menu" id="wp-admin-bar-root-default" class="ab-top-menu"><li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" role="menuitem" aria-expanded="false" href="http://localhost/wordpress/wp-admin/about.php"><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul role="menu" aria-label="About WordPress" id="wp-admin-bar-wp-logo-default" class="ab-submenu"><li id="wp-admin-bar-about"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/about.php">About WordPress</a></li><li id="wp-admin-bar-contribute"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/contribute.php">Get Involved</a></li></ul><ul role="menu" aria-label="About WordPress" id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu"><li id="wp-admin-bar-wporg"><a class="ab-item" role="menuitem" href="https://wordpress.org/">WordPress.org</a></li><li id="wp-admin-bar-documentation"><a class="ab-item" role="menuitem" href="https://wordpress.org/documentation/">Documentation</a></li><li id="wp-admin-bar-learn"><a class="ab-item" role="menuitem" href="https://learn.wordpress.org/">Learn WordPress</a></li><li id="wp-admin-bar-support-forums"><a class="ab-item" role="menuitem" href="https://wordpress.org/support/forums/">Support</a></li><li id="wp-admin-bar-feedback"><a class="ab-item" role="menuitem" href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li></ul></div></li><li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" role="menuitem" aria-expanded="false" href="http://localhost/wordpress/wp-admin/">Nike</a><div class="ab-sub-wrapper"><ul role="menu" aria-label="Nike" id="wp-admin-bar-site-name-default" class="ab-submenu"><li id="wp-admin-bar-dashboard"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/">Dashboard</a></li><li id="wp-admin-bar-plugins"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/plugins.php">Plugins</a></li></ul><ul role="menu" aria-label="Nike" id="wp-admin-bar-appearance" class="ab-submenu"><li id="wp-admin-bar-themes"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/themes.php">Themes</a></li><li id="wp-admin-bar-widgets"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/widgets.php">Widgets</a></li><li id="wp-admin-bar-menus"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/nav-menus.php">Menus</a></li><li id="wp-admin-bar-background" class="hide-if-customize"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/themes.php?page=custom-background">Background</a></li><li id="wp-admin-bar-header" class="hide-if-customize"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/themes.php?page=custom-header">Header</a></li></ul></div></li><li id="wp-admin-bar-customize" class="hide-if-no-customize"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/customize.php?url=http%3A%2F%2Flocalhost%2Fwordpress%2F">Customize</a></li><li id="wp-admin-bar-comments"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/edit-comments.php"><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 Comments in moderation</span></a></li><li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" role="menuitem" aria-expanded="false" href="http://localhost/wordpress/wp-admin/post-new.php"><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul role="menu" aria-label="New" id="wp-admin-bar-new-content-default" class="ab-submenu"><li id="wp-admin-bar-new-post"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/post-new.php">Post</a></li><li id="wp-admin-bar-new-media"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/media-new.php">Media</a></li><li id="wp-admin-bar-new-page"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/post-new.php?post_type=page">Page</a></li><li id="wp-admin-bar-new-e-landing-page"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/edit.php?action=elementor_new_post&amp;post_type=e-landing-page&amp;template_type=landing-page&amp;_wpnonce=ea16b4a8b7#library">Landing Page</a></li><li id="wp-admin-bar-new-elementor_library"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/post-new.php?post_type=elementor_library">Template</a></li><li id="wp-admin-bar-new-product"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/post-new.php?post_type=product">Product</a></li><li id="wp-admin-bar-new-shop_order"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/post-new.php?post_type=shop_order">Order</a></li><li id="wp-admin-bar-new-shop_coupon"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/post-new.php?post_type=shop_coupon">Coupon</a></li><li id="wp-admin-bar-new-user"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/user-new.php">User</a></li></ul></div></li><li id="wp-admin-bar-edit"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/post.php?post=21&amp;action=edit">Edit Page</a></li><li id="wp-admin-bar-elementor_edit_page" class="menupop"><a aria-haspopup="true" class="ab-item  " href="http://localhost/wordpress/wp-admin/post.php?post=21&amp;action=elementor"><span class="elementor-edit-link-title">Edit with Elementor</span></a><div class="ab-sub-wrapper"><ul class="ab-submenu" id="wp-admin-bar-elementor_edit_page-default"><li id="wp-admin-bar-elementor_site_settings" class="elementor-second-section"><a class="ab-item  elementor-site-settings" href="http://localhost/wordpress/wp-admin/post.php?post=21&amp;action=elementor&amp;active-document=11"><span class="elementor-edit-link-title">Site Settings</span><span class="elementor-edit-link-type">Site</span></a></li><li id="wp-admin-bar-elementor_app_site_editor" class="elementor-second-section"><a class="ab-item  elementor-app-link" href="http://localhost/wordpress/wp-admin/admin.php?page=elementor-app&amp;ver=3.21.1#site-editor/promotion"><span class="elementor-edit-link-title">Theme Builder</span><span class="elementor-edit-link-type">Site</span></a></li></ul></div></li><li id="wp-admin-bar-user-registration-menu" class="menupop"><a class="ab-item" role="menuitem" aria-expanded="false" href="http://localhost/wordpress/wp-admin/admin.php?page=user-registration">User Registration</a><div class="ab-sub-wrapper"><ul role="menu" id="wp-admin-bar-user-registration-menu-default" class="ab-submenu"><li id="wp-admin-bar-user-registration-all-forms"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/admin.php?page=user-registration">All Forms</a></li><li id="wp-admin-bar-user-registration-add-new"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/admin.php?page=add-new-registration">Add New</a></li><li id="wp-admin-bar-user-registration-settings"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/admin.php?page=user-registration-settings">Settings</a></li><li id="wp-admin-bar-user-registration-docs"><a class="ab-item" role="menuitem" href="https://docs.wpuserregistration.com/?utm_medium=admin-bar&amp;utm_source=WordPress&amp;utm_content=Documentation" target="_blank" rel="noopener noreferrer">Documentation</a></li></ul></div></li></ul><ul role="menu" id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu"><li id="wp-admin-bar-search" class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1" role="menuitem"><form action="http://localhost/wordpress/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150"><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"></form></div></li><li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" role="menuitem" aria-expanded="false" href="http://localhost/wordpress/wp-admin/profile.php">Howdy, <span class="display-name">admin</span><img alt="" src="http://0.gravatar.com/avatar/0387b4612fb515721c975ea229bef90a?s=26&amp;d=mm&amp;r=g" srcset="http://0.gravatar.com/avatar/0387b4612fb515721c975ea229bef90a?s=52&amp;d=mm&amp;r=g 2x" class="avatar avatar-26 photo" height="26" width="26" decoding="async"></a><div class="ab-sub-wrapper"><ul role="menu" aria-label="Howdy, admin" id="wp-admin-bar-user-actions" class="ab-submenu"><li id="wp-admin-bar-user-info"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-admin/profile.php"><img alt="" src="http://0.gravatar.com/avatar/0387b4612fb515721c975ea229bef90a?s=64&amp;d=mm&amp;r=g" srcset="http://0.gravatar.com/avatar/0387b4612fb515721c975ea229bef90a?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" decoding="async"><span class="display-name">admin</span><span class="display-name edit-profile">Edit Profile</span></a></li><li id="wp-admin-bar-logout"><a class="ab-item" role="menuitem" href="http://localhost/wordpress/wp-login.php?action=logout&amp;_wpnonce=69d694a0c7">Log Out</a></li></ul></div></li></ul>			</div>
+            </div>
+    
+            <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <header id="site-navigation" class="header text-center text-md-left">
+        <div class="home-page-header">
+            <div class="topheader">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-5 align-self-center">
+                            <div class="row">
+                                                                                                                </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 adver-text align-self-center">
+                                                </div>
+    
+                        <div class="col-lg-3 col-md-2 col-sm-12 align-self-center ">
+                            <div class="row">
+                                <div class="col-lg-6 wish-list text-right col-6 align-self-center">
+                                                                </div>
+                                <div class="col-lg-6 col-6 align-self-center text-left">
+                                                                                                                <a class="cart-customlocation" href="http://localhost/wordpress/cart/" title="View Shopping Cart"><i class="fas fa-shopping-bag"></i><span class="cart-item-box">6</span></a>
+                                                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header py-2 sticky-header">
+                <div class="container-fluid">
+                    <div class="row mx-0">
+                        <div class="col-lg-2 col-md-3 col-sm-3 align-self-center">
+                            <div class="logo text-center text-md-left mb-3 mb-lg-0">
+                                <div class="logo-image">
+                                                                </div>
+                                <div class="logo-content">
+                                    <a href="http://localhost/wordpress/" title="Nike">Nike</a>							</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-9 col-sm-7 align-self-center ">
+                            <button class="menu-toggle my-2 py-2 px-3" aria-controls="top-menu" aria-expanded="false" type="button">
+                                <span aria-hidden="true">Menu</span>
+                            </button>
+                            <nav id="main-menu" class="close-panal">
+                                <false class="menu"><ul class="nav-menu">
+    <li class="page_item page-item-14"><a href="http://localhost/wordpress/cart/">Cart</a></li>
+    <li class="page_item page-item-15"><a href="http://localhost/wordpress/checkout/">Checkout</a></li>
+    <li class="page_item page-item-21 current_page_item"><a href="http://localhost/wordpress/" aria-current="page">Home</a></li>
+    <li class="page_item page-item-36"><a href="http://localhost/wordpress/my-account-2/">My Account</a></li>
+    <li class="page_item page-item-35"><a href="http://localhost/wordpress/registration/">Registration</a></li>
+    <li class="page_item page-item-13"><a href="http://localhost/wordpress/shop/">Shop</a></li>
+    </ul></false>
+                                <button class="close-menu my-2 p-2" type="button">
+                                    <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                                </button>
+                            </nav>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 align-self-center">
+                                                        <div class="search-box">
+                                    <form role="search" method="get" class="woocommerce-product-search" action="http://localhost/wordpress/">
+        <label class="screen-reader-text" for="woocommerce-product-search-field-0">Search for:</label>
+        <input type="search" id="woocommerce-product-search-field-0" class="search-field" placeholder="Search products…" value="" name="s">
+        <button type="submit" value="Search" class="">Search</button>
+        <input type="hidden" name="post_type" value="product">
+    </form>
+                                </div>
+                                                </div>
+    
+                        <div class="col-lg-2 my-account align-self-center col-md-6 text-md-center text-lg-left">
+                                                                                        <a href="http://localhost/wordpress/?page_id=16" title="My Account"><i class="fas fa-sign-in-alt mr-2"></i>My Account<span class="screen-reader-text">My Account</span></a>
+                                                                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div id="content">
+                <div data-elementor-type="wp-page" data-elementor-id="21" class="elementor elementor-21">
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-6f94728 shoes-store-elementor-banner-section elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="6f94728" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-61eb246" data-id="61eb246" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-606f64ab elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="606f64ab" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-65a3ac07" data-id="65a3ac07" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-6ce105b8 elementor-widget elementor-widget-text-editor" data-id="6ce105b8" data-element_type="widget" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                <style>/*! elementor - v3.21.0 - 18-04-2024 */
+    .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#69727d;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#69727d;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<p>New Shoes Collection</p>						</div>
+                    </div>
+                    <div class="elementor-element elementor-element-69f7abdd elementor-widget elementor-widget-heading" data-id="69f7abdd" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <style>/*! elementor - v3.21.0 - 18-04-2024 */
+    .elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h1 class="elementor-heading-title elementor-size-default">Live In Trend</h1>		</div>
+                    </div>
+                    <div class="elementor-element elementor-element-674f1ecc elementor-widget elementor-widget-text-editor" data-id="674f1ecc" data-element_type="widget" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                                <p>Check out our trending shoes!!</p>						</div>
+                    </div>
+                    <div class="elementor-element elementor-element-7ccbf6ce elementor-align-left elementor-widget elementor-widget-button" data-id="7ccbf6ce" data-element_type="widget" data-widget_type="button.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-button-wrapper">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+                            <span class="elementor-button-content-wrapper">
+                                        <span class="elementor-button-text">Shop Now</span>
+                        </span>
+                        </a>
+            </div>
+                    </div>
+                    </div>
+                        </div>
+            </div>
+                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-76976183" data-id="76976183" data-element_type="column">
+                <div class="elementor-widget-wrap">
+                                </div>
+            </div>
+                        </div>
+            </section>
+                        </div>
+            </div>
+                        </div>
+            </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-73d4090a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="73d4090a" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7b479b96" data-id="7b479b96" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-5e182286 elementor-widget elementor-widget-spacer" data-id="5e182286" data-element_type="widget" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                <style>/*! elementor - v3.21.0 - 18-04-2024 */
+    .elementor-column .elementor-spacer-inner{height:var(--spacer-size)}.e-con{--container-widget-width:100%}.e-con-inner>.elementor-widget-spacer,.e-con>.elementor-widget-spacer{width:var(--container-widget-width,var(--spacer-size));--align-self:var(--container-widget-align-self,initial);--flex-shrink:0}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container,.e-con>.elementor-widget-spacer>.elementor-widget-container{height:100%;width:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer{height:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner{height:var(--container-widget-height,var(--spacer-size))}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty,.e-con>.elementor-widget-spacer.elementor-widget-empty{position:relative;min-height:22px;min-width:22px}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon,.e-con>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;padding:0;width:22px;height:22px}</style>		<div class="elementor-spacer">
+                <div class="elementor-spacer-inner"></div>
+            </div>
+                    </div>
+                    </div>
+                        </div>
+            </div>
+                        </div>
+            </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-366a7253 shoes-store-elementor-product-heading elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="366a7253" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5952fa23" data-id="5952fa23" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-7fb7032b elementor-widget elementor-widget-heading" data-id="7fb7032b" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default">Featured Products<br></h2>		</div>
+                    </div>
+                        </div>
+            </div>
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5c798183" data-id="5c798183" data-element_type="column">
+                <div class="elementor-widget-wrap">
+                                </div>
+            </div>
+                        </div>
+            </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-3fb2e922 shoes-store-elementor-product-section  elementor-section-content-space-around elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3fb2e922" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-71f16f92" data-id="71f16f92" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-6ea69998 elementor-widget elementor-widget-shortcode" data-id="6ea69998" data-element_type="widget" data-widget_type="shortcode.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-shortcode"><div class="woocommerce columns-4 "><ul class="products columns-4">
+    <li class="product type-product post-28 status-publish first instock product_cat-product-category has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+        <a href="http://localhost/wordpress/product/cali-kari-sneakers/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+        <span class="onsale">Sale!</span>
+        <img decoding="async" width="224" height="130" src="http://localhost/wordpress/wp-content/uploads/2024/04/Cali-Kari-Sneakers.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""><h2 class="woocommerce-loop-product__title">Cali Kari Sneakers</h2>
+        <span class="price"><span class="woocs_price_code" data-currency="" data-redraw-id="6625b1afcaa6b" data-product-id="28"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>600.00<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></del> <span class="screen-reader-text">Original price was: 600.00$.</span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>600.00<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></ins><span class="screen-reader-text">Current price is: 600.00$.</span></span></span>
+    </a><a href="?add-to-cart=28" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="28" data-product_sku="" aria-label="Add to cart: “Cali Kari Sneakers”" aria-describedby="" rel="nofollow">Add to cart</a></li>
+    <li class="product type-product post-22 status-publish instock product_cat-product-category has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+        <a href="http://localhost/wordpress/product/nike-kyrie-7-tb-midnight/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+        <span class="onsale">Sale!</span>
+        <img decoding="async" width="224" height="130" src="http://localhost/wordpress/wp-content/uploads/2024/04/Nike-Kyrie-7-TB-Midnight.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""><h2 class="woocommerce-loop-product__title">Nike Kyrie 7 TB Midnight</h2>
+        <span class="price"><span class="woocs_price_code" data-currency="" data-redraw-id="6625b1afcd3af" data-product-id="22"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>600.00<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></del> <span class="screen-reader-text">Original price was: 600.00$.</span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>600.00<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></ins><span class="screen-reader-text">Current price is: 600.00$.</span></span></span>
+    </a><a href="?add-to-cart=22" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="22" data-product_sku="" aria-label="Add to cart: “Nike Kyrie 7 TB Midnight”" aria-describedby="" rel="nofollow">Add to cart</a></li>
+    <li class="product type-product post-24 status-publish instock product_cat-product-category has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+        <a href="http://localhost/wordpress/product/preventing-sneaker-bots/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+        <span class="onsale">Sale!</span>
+        <img decoding="async" width="224" height="130" src="http://localhost/wordpress/wp-content/uploads/2024/04/Preventing-Sneaker-Bots.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""><h2 class="woocommerce-loop-product__title">Preventing Sneaker Bots</h2>
+        <span class="price"><span class="woocs_price_code" data-currency="" data-redraw-id="6625b1afcfe24" data-product-id="24"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>600.00<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></del> <span class="screen-reader-text">Original price was: 600.00$.</span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>600.00<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></ins><span class="screen-reader-text">Current price is: 600.00$.</span></span></span>
+    </a><a href="?add-to-cart=24" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="24" data-product_sku="" aria-label="Add to cart: “Preventing Sneaker Bots”" aria-describedby="" rel="nofollow">Add to cart</a></li>
+    <li class="product type-product post-26 status-publish last instock product_cat-product-category has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+        <a href="http://localhost/wordpress/product/rs-x-cnv-sneakers/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+        <span class="onsale">Sale!</span>
+        <img loading="lazy" decoding="async" width="224" height="130" src="http://localhost/wordpress/wp-content/uploads/2024/04/RS-X-CNV-Sneakers.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""><h2 class="woocommerce-loop-product__title">RS X CNV Sneakers</h2>
+        <span class="price"><span class="woocs_price_code" data-currency="" data-redraw-id="6625b1afd27ee" data-product-id="26"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>600.00<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></del> <span class="screen-reader-text">Original price was: 600.00$.</span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>600.00<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></ins><span class="screen-reader-text">Current price is: 600.00$.</span></span></span>
+    </a><a href="?add-to-cart=26" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="26" data-product_sku="" aria-label="Add to cart: “RS X CNV Sneakers”" aria-describedby="" rel="nofollow">Add to cart</a></li>
+    </ul>
+    </div></div>
+                    </div>
+                    </div>
+                        </div>
+            </div>
+                        </div>
+            </section>
+                    </div>
+            </div>
+    
+    
+    <footer class="footer-side">
+      <div class="footer-widget">
+        <div class="container">
+              </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 align-self-center">
+              <p class="mb-0 py-3 text-center text-md-left">
+                 
+                  <a href="https://www.wpelemento.com/elementor/free-shoes-wordpress-theme/" target="_blank">
+                  Shoes Store Elementor WordPress Theme              </a>
+                                         By WP Elemento                      </p>
+            </div>
+            <div class="col-lg-6 col-md-6 align-self-center text-center text-md-right">
+                          <a href="https://wordpress.org" rel="generator">Proudly powered by WordPress</a>
+                      </div>
+          </div>
+        </div>
+      </div>
+      </footer>
+    
+                <script type="text/javascript">
+                    const lazyloadRunObserver = () => {
+                        const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+                        const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+                            entries.forEach( ( entry ) => {
+                                if ( entry.isIntersecting ) {
+                                    let lazyloadBackground = entry.target;
+                                    if( lazyloadBackground ) {
+                                        lazyloadBackground.classList.add( 'e-lazyloaded' );
+                                    }
+                                    lazyloadBackgroundObserver.unobserve( entry.target );
+                                }
+                            });
+                        }, { rootMargin: '200px 0px 200px 0px' } );
+                        lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+                            lazyloadBackgroundObserver.observe( lazyloadBackground );
+                        } );
+                    };
+                    const events = [
+                        'DOMContentLoaded',
+                        'elementor/lazyload/observe',
+                    ];
+                    events.forEach( ( event ) => {
+                        document.addEventListener( event, lazyloadRunObserver );
+                    } );
+                </script>
+                <script type="text/template" id="tmpl-elementor-templates-modal__header">
+        <div class="elementor-templates-modal__header__logo-area"></div>
+        <div class="elementor-templates-modal__header__menu-area"></div>
+        <div class="elementor-templates-modal__header__items-area">
+            <# if ( closeType ) { #>
+                <div class="elementor-templates-modal__header__close elementor-templates-modal__header__close--{{{ closeType }}} elementor-templates-modal__header__item">
+                    <# if ( 'skip' === closeType ) { #>
+                    <span>Skip</span>
+                    <# } #>
+                    <i class="eicon-close" aria-hidden="true"></i>
+                    <span class="elementor-screen-only">Close</span>
+                </div>
+            <# } #>
+            <div id="elementor-template-library-header-tools"></div>
+        </div>
+    </script>
+    
+    <script type="text/template" id="tmpl-elementor-templates-modal__header__logo">
+        <span class="elementor-templates-modal__header__logo__icon-wrapper e-logo-wrapper">
+            <i class="eicon-elementor"></i>
+        </span>
+        <span class="elementor-templates-modal__header__logo__title">{{{ title }}}</span>
+    </script>
+    <script type="text/template" id="tmpl-elementor-finder">
+        <div id="elementor-finder__search">
+            <i class="eicon-search" aria-hidden="true"></i>
+            <input id="elementor-finder__search__input" placeholder="Type to find anything in Elementor" autocomplete="off">
+        </div>
+        <div id="elementor-finder__content"></div>
+    </script>
+    
+    <script type="text/template" id="tmpl-elementor-finder-results-container">
+        <div id="elementor-finder__no-results">No Results Found</div>
+        <div id="elementor-finder__results"></div>
+    </script>
+    
+    <script type="text/template" id="tmpl-elementor-finder__results__category">
+        <div class="elementor-finder__results__category__title">{{{ title }}}</div>
+        <div class="elementor-finder__results__category__items"></div>
+    </script>
+    
+    <script type="text/template" id="tmpl-elementor-finder__results__item">
+        <a href="{{ url }}" class="elementor-finder__results__item__link">
+            <div class="elementor-finder__results__item__icon">
+                <i class="eicon-{{{ icon }}}" aria-hidden="true"></i>
+            </div>
+            <div class="elementor-finder__results__item__title">{{{ title }}}</div>
+            <# if ( description ) { #>
+                <div class="elementor-finder__results__item__description">- {{{ description }}}</div>
+            <# } #>
+    
+            <# if ( lock ) { #>
+            <div class="elementor-finder__results__item__badge"><i class="{{{ lock.badge.icon }}}"></i>{{ lock.badge.text }}</div>
+            <# } #>
+        </a>
+        <# if ( actions.length ) { #>
+            <div class="elementor-finder__results__item__actions">
+            <# jQuery.each( actions, function() { #>
+                <a class="elementor-finder__results__item__action elementor-finder__results__item__action--{{ this.name }}" href="{{ this.url }}" target="_blank">
+                    <i class="eicon-{{{ this.icon }}}"></i>
+                </a>
+            <# } ); #>
+            </div>
+        <# } #>
+    </script>
+        <script type="text/javascript">
+            (function () {
+                var c = document.body.className;
+                c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+                document.body.className = c;
+            })();
+        </script>
+        <link rel="stylesheet" id="wc-blocks-style-css" href="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-8.8.2" type="text/css" media="all">
+    <link rel="stylesheet" id="woocommerce-currency-switcher-css" href="http://localhost/wordpress/wp-content/plugins/woocommerce-currency-switcher/css/front.css?ver=1.4.1.9" type="text/css" media="all">
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=8.8.2" id="sourcebuster-js-js"></script>
+    <script type="text/javascript" id="wc-order-attribution-js-extra">
+    /* <![CDATA[ */
+    var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"ajaxurl":"http:\/\/localhost\/wordpress\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=8.8.2" id="wc-order-attribution-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/themes/shoes-store-elementor/assets/js/navigation.js?ver=1.0" id="shoes-store-elementor-navigation-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/themes/shoes-store-elementor/assets/js/script.js?ver=1.0" id="shoes-store-elementor-script-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/comment-reply.min.js?ver=6.5.2" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.2" id="jquery-ui-mouse-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.2" id="jquery-ui-draggable-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/backbone.min.js?ver=1.5.0" id="backbone-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/lib/backbone/backbone.marionette.min.js?ver=2.4.5.e1" id="backbone-marionette-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/lib/backbone/backbone.radio.min.js?ver=1.0.4" id="backbone-radio-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/common-modules.min.js?ver=3.21.1" id="elementor-common-modules-js"></script>
+    <script type="text/javascript" id="elementor-web-cli-js-before">
+    /* <![CDATA[ */
+    var elementorWebCliConfig = {"isDebug":false,"urls":{"rest":"http:\/\/localhost\/wordpress\/wp-json\/","assets":"http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"nonce":"f86fa51555","version":"3.21.1"};
+    var elementorWebCliConfig = {"isDebug":false,"urls":{"rest":"http:\/\/localhost\/wordpress\/wp-json\/","assets":"http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"nonce":"f86fa51555","version":"3.21.1"};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/web-cli.min.js?ver=3.21.1" id="elementor-web-cli-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0" id="elementor-dialog-js"></script>
+    <script type="text/javascript" id="wp-api-request-js-extra">
+    /* <![CDATA[ */
+    var wpApiSettings = {"root":"http:\/\/localhost\/wordpress\/wp-json\/","nonce":"f86fa51555","versionString":"wp\/v2\/"};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/api-request.min.js?ver=6.5.2" id="wp-api-request-js"></script>
+    <script type="text/javascript" id="elementor-dev-tools-js-before">
+    /* <![CDATA[ */
+    var elementorDevToolsConfig = {"isDebug":false,"urls":{"assets":"http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"deprecation":{"soft_notices":[],"soft_version_count":4,"hard_version_count":8,"current_version":"3.21.1"}};
+    var elementorDevToolsConfig = {"isDebug":false,"urls":{"assets":"http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"deprecation":{"soft_notices":[],"soft_version_count":4,"hard_version_count":8,"current_version":"3.21.1"}};
+    var elementorDevToolsConfig = {"isDebug":false,"urls":{"assets":"http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"deprecation":{"soft_notices":[],"soft_version_count":4,"hard_version_count":8,"current_version":"3.21.1"}};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/dev-tools.min.js?ver=3.21.1" id="elementor-dev-tools-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+    <script type="text/javascript" id="wp-i18n-js-after">
+    /* <![CDATA[ */
+    wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+    /* ]]> */
+    </script>
+    <script type="text/javascript" id="elementor-common-js-before">
+    /* <![CDATA[ */
+    var elementorCommonConfig = {"version":"3.21.1","isRTL":false,"isDebug":false,"isElementorDebug":false,"activeModules":["ajax","finder","connect","event-tracker"],"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"container_grid":true,"home_screen":true,"ai-layout":true,"landing-pages":true,"e_lazyload":true},"urls":{"assets":"http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/","rest":"http:\/\/localhost\/wordpress\/wp-json\/"},"filesUpload":{"unfilteredFiles":false},"library_connect":{"is_connected":false,"subscription_plans":{"free":{"label":null,"promotion_url":null,"color":null},"essential":{"label":"Pro","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"},"essential-oct2023":{"label":"Advanced","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"},"advanced":{"label":"Advanced","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"},"expert":{"label":"Expert","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"},"agency":{"label":"Agency","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"}},"base_access_level":0,"base_access_tier":"free","current_access_level":0,"current_access_tier":"free"},"ajax":{"url":"http:\/\/localhost\/wordpress\/wp-admin\/admin-ajax.php","nonce":"56cdf95068"},"finder":{"data":{"edit":{"title":"Edit","dynamic":true,"name":"edit"},"general":{"title":"General","dynamic":false,"items":{"saved-templates":{"title":"Saved Templates","icon":"library-save","url":"http:\/\/localhost\/wordpress\/wp-admin\/edit.php?post_type=elementor_library&tabs_group=library","keywords":["template","section","page","library"]},"system-info":{"title":"System Info","icon":"info-circle-o","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-system-info","keywords":["system","info","environment","elementor"]},"role-manager":{"title":"Role Manager","icon":"person","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-role-manager","keywords":["role","manager","user","elementor"]},"knowledge-base":{"title":"Knowledge Base","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=go_knowledge_base_site","keywords":["help","knowledge","docs","elementor"]},"theme-builder":{"title":"Theme Builder","icon":"library-save","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-app&ver=3.21.1#site-editor\/promotion","keywords":["template","header","footer","single","archive","search","404","library"]},"kit-library":{"title":"Kit Library","icon":"kit-parts","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-app&ver=3.21.1#\/kit-library","keywords":["kit library","kit","library","site parts","parts","assets","templates"]}},"name":"general"},"create":{"title":"Create","dynamic":false,"items":{"page":{"title":"Add New Page Template","icon":"plus-circle-o","url":"http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=page&_wpnonce=ea16b4a8b7","keywords":["Add New Page Template","post","page","template","new","create"]},"section":{"title":"Add New Section","icon":"plus-circle-o","url":"http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=section&_wpnonce=ea16b4a8b7","keywords":["Add New Section","post","page","template","new","create"]},"container":{"title":"Add New Container","icon":"plus-circle-o","url":"http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=container&_wpnonce=ea16b4a8b7","keywords":["Add New Container","post","page","template","new","create"]},"wp-post":{"title":"Add New Post","icon":"plus-circle-o","url":"http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&template_type=wp-post&_wpnonce=ea16b4a8b7","keywords":["Add New Post","post","page","template","new","create"]},"wp-page":{"title":"Add New Page","icon":"plus-circle-o","url":"http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&template_type=wp-page&_wpnonce=ea16b4a8b7","keywords":["Add New Page","post","page","template","new","create"]},"landing-page":{"title":"Add New Landing Page","icon":"plus-circle-o","url":"http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=e-landing-page&template_type=landing-page&_wpnonce=ea16b4a8b7#library","keywords":["Add New Landing Page","post","page","template","new","create"]}},"name":"create"},"site":{"title":"Site","dynamic":false,"items":{"homepage":{"title":"Homepage","url":"http:\/\/localhost\/wordpress","icon":"home-heart","keywords":["home","page"]},"wordpress-dashboard":{"title":"Dashboard","icon":"dashboard","url":"http:\/\/localhost\/wordpress\/wp-admin\/","keywords":["dashboard","wordpress"]},"wordpress-menus":{"title":"Menus","icon":"wordpress","url":"http:\/\/localhost\/wordpress\/wp-admin\/nav-menus.php","keywords":["menu","wordpress"]},"wordpress-themes":{"title":"Themes","icon":"wordpress","url":"http:\/\/localhost\/wordpress\/wp-admin\/themes.php","keywords":["themes","wordpress"]},"wordpress-customizer":{"title":"Customizer","icon":"wordpress","url":"http:\/\/localhost\/wordpress\/wp-admin\/customize.php","keywords":["customizer","wordpress"]},"wordpress-plugins":{"title":"Plugins","icon":"wordpress","url":"http:\/\/localhost\/wordpress\/wp-admin\/plugins.php","keywords":["plugins","wordpress"]},"wordpress-users":{"title":"Users","icon":"wordpress","url":"http:\/\/localhost\/wordpress\/wp-admin\/users.php","keywords":["users","profile","wordpress"]},"apps":{"title":"Add-ons","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-apps","icon":"apps","keywords":["apps","addon","plugin","extension","integration"]}},"name":"site"},"settings":{"title":"Settings","dynamic":false,"items":{"general-settings":{"title":"General Settings","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor","keywords":["general","settings","elementor"]},"advanced":{"title":"Advanced","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor#tab-advanced","keywords":["advanced","settings","elementor"]},"experiments":{"title":"Experiments","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor#tab-experiments","keywords":["settings","elementor","experiments"]},"features":{"title":"Features","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor#tab-experiments","keywords":["settings","elementor","features"]},"element-manager":{"title":"Element Manager","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-element-manager","keywords":["settings","elements","widgets","manager"]}},"name":"settings"},"tools":{"title":"Tools","dynamic":false,"items":{"tools":{"title":"Tools","icon":"tools","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools","keywords":["tools","regenerate css","safe mode","debug bar","sync library","elementor"]},"replace-url":{"title":"Replace URL","icon":"tools","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url","keywords":["tools","replace url","domain","elementor"]},"maintenance-mode":{"title":"Maintenance Mode","icon":"tools","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode","keywords":["tools","maintenance","coming soon","elementor"]},"import-export":{"title":"Import Export","icon":"import-export","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-import-export-kit","keywords":["tools","import export","import","export","kit"]},"version-control":{"title":"Version Control","icon":"time-line","url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-versions","keywords":["tools","version","control","rollback","beta","elementor"]}},"name":"tools"}}},"connect":[],"event-tracker":{"isUserDataShared":false}};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/common.min.js?ver=3.21.1" id="elementor-common-js"></script>
+    <script type="text/javascript" id="elementor-app-loader-js-before">
+    /* <![CDATA[ */
+    var elementorAppConfig = {"menu_url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-app&ver=3.21.1#site-editor\/promotion","assets_url":"http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/","pages_url":"http:\/\/localhost\/wordpress\/wp-admin\/edit.php?post_type=page","return_url":"http:\/\/localhost\/wordpress\/registration\/","hasPro":false,"admin_url":"http:\/\/localhost\/wordpress\/wp-admin\/","login_url":"http:\/\/localhost\/wordpress\/wp-login.php","base_url":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-app&ver=3.21.1","promotion":{"upgrade_url":"https:\/\/go.elementor.com\/go-pro-theme-builder\/"},"site-editor":[],"import-export":[],"kit-library":[],"onboarding":[]};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/app-loader.min.js?ver=3.21.1" id="elementor-app-loader-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/jquery/ui/slider.min.js?ver=1.13.2" id="jquery-ui-slider-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min.js?ver=8.8.2" id="wc-jquery-ui-touchpunch-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce-currency-switcher/js/price-slider_33.js?ver=1.4.1.9" id="wc-price-slider_33-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce-currency-switcher/js/real-active-filters.js?ver=1.4.1.9" id="woocs-real-active-filters-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce-currency-switcher/js/real-price-filter-frontend.js?ver=1.4.1.9" id="woocs-price-filter-frontend-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce-currency-switcher/js/jquery.ddslick.min.js?ver=1.4.1.9" id="jquery.ddslick.min-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/woocommerce-currency-switcher/js/front.js?ver=1.4.1.9" id="woocommerce-currency-switcher-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.21.1" id="elementor-webpack-runtime-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.21.1" id="elementor-frontend-modules-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+    <script type="text/javascript" id="elementor-frontend-js-before">
+    /* <![CDATA[ */
+    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.21.1","is_static":false,"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"container_grid":true,"home_screen":true,"ai-layout":true,"landing-pages":true,"e_lazyload":true},"urls":{"assets":"http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":21,"title":"Nike","excerpt":"","featuredImage":false},"user":{"roles":["administrator"]}};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.21.1" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+    <script type="text/javascript" id="elementor-admin-bar-js-before">
+    /* <![CDATA[ */
+    var elementorAdminBarConfig = {"elementor_edit_page":{"id":"elementor_edit_page","title":"Edit with Elementor","href":"http:\/\/localhost\/wordpress\/wp-admin\/post.php?post=21&action=elementor","children":{"22":{"id":"elementor_site_settings","title":"Site Settings","sub_title":"Site","href":"http:\/\/localhost\/wordpress\/wp-admin\/post.php?post=21&action=elementor&active-document=11","class":"elementor-site-settings","parent_class":"elementor-second-section"},"23":{"id":"elementor_app_site_editor","title":"Theme Builder","sub_title":"Site","href":"http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-app&ver=3.21.1#site-editor\/promotion","class":"elementor-app-link","parent_class":"elementor-second-section"}}}};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/plugins/elementor/assets/js/elementor-admin-bar.min.js?ver=3.21.1" id="elementor-admin-bar-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
+    <script type="text/javascript" src="http://localhost/wordpress/wp-includes/js/admin-bar.min.js?ver=6.5.2" id="admin-bar-js"></script>
+    
+    
+    
+    </body></html>
